@@ -1,0 +1,66 @@
+@font-face { font-family: OrangeJuice; src: url('orange%20juice%202.0.ttf');}
+@font-face { font-family: Caviar; src: url('CaviarDreams.ttf');}
+@font-face { font-family: Caviar_bold; src: url('CaviarDreams_Bold.ttf');} 
+@font-face { font-family: Caviar_italic; src: url('CaviarDreams_Italic.ttf');}
+@font-face { font-family: Caviar_bolditalic; src: url('CaviarDreams_BoldItalic.ttf');}
+@font-face { font-family: Hambh; src: url('HAMBH.TTF');}
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: url(trophy.jpg);
+    background-attachment: fixed;
+}
+h1{
+    font-family: caviar;
+    font-size: 350px;
+    padding-top: 15%;
+    color: #222;
+    position: absolute;
+    width: 100%;
+    text-align: center
+}
+h2{
+    position: absolute;
+    color: #222;
+    top: 1700px;
+    font-family: caviar_bold;
+    
+}
+h3{
+    position: absolute;
+    top: 1750px;
+    font-family: caviar;
+    left: 50%
+}
+.back1, .back2{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    height: 1000px;
+}
+.back1{
+    top: 0px;
+}
+.back2{
+    top: 1500px;
+}
+.hamburger{
+    position: absolute
+}
+#ham1{
+    top: 1700px;
+    left: ;
+    width: 50%
+}
+#ham2{
+    top: 2330.5px;
+    left: ;
+    width: 50%
+}
+#ham3{
+    top: 2330px;
+    left: 50%;
+    width: 50%
+}

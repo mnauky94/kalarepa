@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                var top = 0 ,
+                    step = 55 ,
+                    viewport = $(window).height(),
+                    body = $('body'),
+                    wheel = false;
+
+
+                $('body').mousewheel(function(event, delta) {
+
+                    wheel = true;
+
+                    if (delta < 0) {
+
+                        top = (top+viewport) >= $(document).height() ? top : top+=step;
+
+                        body.stop().animate({scrollTop: top}, 400, function () {
+                            wheel = false;
+                        });
+                    } else {
+
+                        top = top <= 0 ? 0 : top-=step;
+
+                        body.stop().animate({scrollTop: top}, 400, function () {
+                            wheel = false;
+                        });
+                    }
+
+                    return false;
+                });
+
+                $(window).on('resize', function (e) {
+                    viewport = $(this).height();
+                });
+
+                $(window).on('scroll', function (e) {
+                    if (!wheel)
+                        top = $(this).scrollTop();
+                });
+            });
+        </script>
+        <meta charset="utf-8">
+        <title>HAMBURGER</title>
+        <link rel="stylesheet" href="paralax.css">
+    </head>
+
+    <body>
+       <div class="back1">
+           
+       </div>
+       <div class="back2">
+           
+       </div>
+           <h1>KALAREPA</h1>
+       <img src="hamburger1.jpg" alt="hamburger" class="hamburger" id="ham1">
+       <img src="hamburger2.jpg" alt="hamburger" class="hamburger" id="ham2">
+       <img src="hamburger3.jpg" alt="hamburger" class="hamburger" id="ham3">
+       <div>
+           <h2>Hamburger</h2><h3>A hamburger (also called a beef burger, hamburger sandwich, burger or hamburg) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bun. Hamburgers are often served with lettuce, bacon, tomato, onion, pickles, cheese and condiments such as mustard, mayonnaise, ketchup, relish, and green chile.</h3>
+       </div>
+           
+           
+           
+        <div class="footer">
+            <br>Site by <a href="https://github.com/mnauky94">"Mnauky 94"</a>
+        </div>
+    </body>
+
+</html>
