@@ -42,8 +42,9 @@
             
             $(window).scroll(function(){
                 var scroll = $("body").scrollTop();
-                if(scroll < 800) {
-                    $(".move").css("left", 1.6*scroll - 1080);
+                if(scroll > 600) {
+                    $(".move").css("left", 100);
+                    $(".move").css("opacity", 1);
                 }
             })
         
@@ -150,9 +151,9 @@
         </div> -->
         
         
-        <div class="move">
-            <img src="Untitled%203.bmp" alt="big boys" class="blur">
-        </div>
+
+            <img src="Untitled%203.bmp" alt="big boys" class="move">
+
         <br>
         <br>
         <br>

@@ -18,8 +18,7 @@ body {
     position: absolute;
     left: 50%;
     margin-left: -375px;
-    top: 20%;
-    top: calc(20% + 50px);
+    top: 35%;
     color: #fff;
     text-align: center;
     width: 750px;
@@ -78,8 +77,8 @@ body {
 }
 .text{
     position: absolute;
-    top: 25%;
-    top: calc(20% + 160px); 
+    top: 35%;
+    top: calc(30% + 160px); 
     width:205px;
     text-align: justify;
     color: black;
@@ -91,8 +90,8 @@ body {
 }
 .bluredtext {
     position: absolute;
-    top: 25%;
-    top: calc(20% + 160px); 
+    top: 35%;
+    top: calc(30% + 160px); 
     width:205px;
     text-align: justify;
     color: transparent;
@@ -122,16 +121,14 @@ h1 {
 }
 .move {
     position: absolute;
-    top: 900px;
-    background: transparent;
-    border-radius: 30px;
-    width: 300px;
-    height: 100px;
+    top: 950px;
+    width: 1200px;
+    height: 900px;
     padding: 30px;
     left: -1080px;
     transition: 1s cubic-bezier(0, .57, .84, 1);
-}
-.blur{
+    opacity: 0;
+
     filter: sepia(0.5);
     -webkit-filter: sepia(0.7);
 }
