@@ -14,53 +14,65 @@ body{
 }
 h1{
     font-family: caviar;
-    font-size: 350px;
-    padding-top: 15%;
+    font-size: 20vw;
     color: #222;
     position: absolute;
+    bottom: 0px;
     width: 100%;
-    text-align: center
+    text-align: center;
+    margin: 0px;
 }
 h2{
     position: absolute;
     color: #222;
-    top: 1700px;
     font-family: caviar_bold;
-    
+    font-size: 8vw;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
 }
 h3{
     position: absolute;
-    top: 1750px;
     font-family: caviar;
-    left: 50%
+    padding: 50px;
+    margin-top: 8vw;
 }
 .back1, .back2{
     position: absolute;
     width: 100%;
     background-color: #fff;
-    height: 1000px;
 }
 .back1{
     top: 0px;
+    height: 100%;
 }
 .back2{
-    top: 1500px;
+    top: 180%;
+    height: 100%;
 }
 .hamburger{
-    position: absolute
+    position: absolute;
+    transition: 0.5s;
 }
 #ham1{
-    top: 1700px;
-    left: ;
-    width: 50%
+    top: 50px;
+    width: 50%;
 }
 #ham2{
-    top: 2330.5px;
-    left: ;
     width: 50%
 }
 #ham3{
-    top: 2330px;
     left: 50%;
     width: 50%
+}
+.text {
+    position: absolute;
+    top: 50px;
+    width: 50%;
+    left: 50%;
+}
+.hamburger:hover {
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+    -moz-filter: brightness(0.5);
 }

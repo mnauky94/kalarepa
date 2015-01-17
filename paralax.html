@@ -6,7 +6,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-
+                
                 var top = 0 ,
                     step = 55 ,
                     viewport = $(window).height(),
@@ -45,27 +45,37 @@
                     if (!wheel)
                         top = $(this).scrollTop();
                 });
+                
+                
             });
+            
+            function resize()
+            {
+                
+                $("#ham2").css("top", (50+ $("#ham1").innerHeight()) + "px");
+                $("#ham3").css("top", (50+ $("#ham1").innerHeight()) + "px");
+            }
         </script>
         <meta charset="utf-8">
         <title>HAMBURGER</title>
         <link rel="stylesheet" href="paralax.css">
     </head>
 
-    <body>
+    <body onresize="resize()">
        <div class="back1">
-           
+           <h1>KALAREPA</h1>
        </div>
+        
        <div class="back2">
            
-       </div>
-           <h1>KALAREPA</h1>
+           
        <img src="hamburger1.jpg" alt="hamburger" class="hamburger" id="ham1">
        <img src="hamburger2.jpg" alt="hamburger" class="hamburger" id="ham2">
        <img src="hamburger3.jpg" alt="hamburger" class="hamburger" id="ham3">
-       <div>
+       <div class="text">
            <h2>Hamburger</h2><h3>A hamburger (also called a beef burger, hamburger sandwich, burger or hamburg) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bun. Hamburgers are often served with lettuce, bacon, tomato, onion, pickles, cheese and condiments such as mustard, mayonnaise, ketchup, relish, and green chile.</h3>
        </div>
+        </div>
            
            
            
