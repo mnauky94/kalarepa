@@ -45,6 +45,7 @@
                 $(window).on('scroll', function (e) {
                     if (!wheel)
                         top = $(this).scrollTop();
+                    paralax();
                 });
                 
                 $("#ham1, #icon1").mouseover(function(){
@@ -81,6 +82,11 @@
                 $("#icon1").css("top", (50+ $("#ham1").innerHeight()/2) + "px");
                 $("#icon2").css("top", (50+ $("#ham1").innerHeight()*3/2) + "px");
                 $("#icon3").css("top", (50+ $("#ham1").innerHeight()*3/2) + "px");
+            }
+            
+            function paralax()
+            {
+                $(".background").css("top", -$("body").scrollTop()/10 +80);
             }
         </script>
         <meta charset="utf-8">
