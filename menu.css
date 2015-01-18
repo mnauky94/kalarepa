@@ -19,12 +19,13 @@ body {
 .kolecka {
     position: absolute;
     left: 50%;
-    margin-left: -375px;
+    transform: translate(-50%);
     top: 35%;
     color: #fff;
     text-align: center;
-    width: 750px;
+    max-width: 750px;
     height: 100px;
+    width: 80%;
 }
 .kolecko {
     position: absolute;
@@ -51,10 +52,10 @@ body {
 }
 
 #k1 {
-    left: 655px;
+    left: calc(100% - 95px);
 }
 #k2 {
-    left: 327.5px;
+    left: calc(50% - 42.5px);
 }
 #k3 {
     left: 0px;
@@ -77,11 +78,21 @@ body {
     left: 0px;
     width: 50%;
 }
+.texty {
+    position: absolute;
+    left: 50%;
+    top: calc(30% + 160px);
+    transform: translate(-50%);
+    color: #fff;
+    text-align: center;
+    max-width: 750px;
+    width: 80%; 
+}
 .text{
     position: absolute;
-    top: 35%;
-    top: calc(30% + 160px); 
+    top: 0px; 
     width:205px;
+    margin-left: -55px;
     text-align: justify;
     color: black;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0);
@@ -92,9 +103,9 @@ body {
 }
 .bluredtext {
     position: absolute;
-    top: 35%;
-    top: calc(30% + 160px); 
+    top: 0px; 
     width:205px;
+    margin-left: -55px;
     text-align: justify;
     color: transparent;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -107,14 +118,14 @@ body {
     position: absolute;
     color: blue
 }
+#t1 {
+    left: calc(100% - 95px);
+}
+#t2 {
+    left: calc(50% - 42.5px);
+}
 #t3 {
-    left: calc(50% - 430px);
-}
-#t2{
-    left: calc(50% - 102.5px);
-}
-#t1{
-    left: calc(50% + 225px);
+    left: 0px;
 }
 h1 {
     margin: 0px;
@@ -126,6 +137,7 @@ h1 {
     top: 10px;
     width: 55%;
     left: -1080px;
+    margin-left: 20%;
     transition: 1s cubic-bezier(0, .57, .84, 1);
     opacity: 0;
     
@@ -160,4 +172,61 @@ h1 {
 }
 .arrowtotop svg {
     fill: #ff8900;
+}
+
+@media screen and (max-width: 640px)
+{
+    .nadpis {
+        padding-top: 0px;  
+        margin-top: -20px;
+        font-size: 25vw;
+    }    
+    .kolecka {
+        top: 170px;
+        width: 55px;
+        height: 750px;
+        left: 50px;
+    }
+    .kolecko {
+        left: 50px;   
+    }
+    #k1 {
+        left: 0px;
+        top: 0px; 
+    }
+    #k2 {
+        left: 0px;
+        top: 150px; 
+    }
+    #k3 {
+        left: 0px;
+        top: 300px; 
+    }
+    
+    .texty {
+        top: 150px;
+        left: 200px;
+        margin-left: 0px;
+        transform: translate(0px);
+        width: calc(100% - 150px);
+    }
+    .text, .bluredtext {
+        width: 100%;
+    }
+    #t1 {
+        top: 10px;
+        left: 0px;
+    }
+    #t2 {
+        top: 160px;
+        left: 0px;
+    }
+    #t3 {
+        top: 310px;
+        left: 0px;
+    }
+    .move {
+        width: 90%;
+        margin-left: 5%;
+    }
 }
