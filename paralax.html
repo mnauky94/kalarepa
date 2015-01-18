@@ -3,18 +3,19 @@
 
     <head>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="jquery.smoothwheel.js"></script>
         <script>
             $(document).ready(function(){
                 resize();
                 
+                //$("body").smoothWheel();
                 var top = 0 ,
                     step = 55 ,
                     viewport = $(window).height(),
                     body = $('body'),
                     wheel = false;
 
-                $('body').mousewheel(function(event, delta) {
+                /*$('body').mousewheel(function(event, delta) {
 
                     wheel = true;
 
@@ -35,7 +36,7 @@
                     }
 
                     return false;
-                });
+                });*/
 
                 $(window).on('resize', function (e) {
                     viewport = $(this).height();
@@ -45,12 +46,41 @@
                     if (!wheel)
                         top = $(this).scrollTop();
                 });
+                
+                $("#ham1, #icon1").mouseover(function(){
+                    $("#ham1").addClass("hamburger_hover");
+                    $("#icon1").addClass("icon_hover");
+                });
+                $("#ham1, #icon1").mouseout(function(){
+                    $("#ham1").removeClass("hamburger_hover");
+                    $("#icon1").removeClass("icon_hover");
+                });
+                $("#ham2, #icon2").mouseover(function(){
+                    $("#ham2").addClass("hamburger_hover");
+                    $("#icon2").addClass("icon_hover");
+                });
+                $("#ham2, #icon2").mouseout(function(){
+                    $("#ham2").removeClass("hamburger_hover");
+                    $("#icon2").removeClass("icon_hover");
+                });
+                $("#ham3, #icon3").mouseover(function(){
+                    $("#ham3").addClass("hamburger_hover");
+                    $("#icon3").addClass("icon_hover");
+                });
+                $("#ham3, #icon3").mouseout(function(){
+                    $("#ham3").removeClass("hamburger_hover");
+                    $("#icon3").removeClass("icon_hover");
+                });
+                
             });
             
             function resize()
             {
                 $("#ham2").css("top", (50+ $("#ham1").innerHeight()) + "px");
                 $("#ham3").css("top", (50+ $("#ham1").innerHeight()) + "px");
+                $("#icon1").css("top", (50+ $("#ham1").innerHeight()/2) + "px");
+                $("#icon2").css("top", (50+ $("#ham1").innerHeight()*3/2) + "px");
+                $("#icon3").css("top", (50+ $("#ham1").innerHeight()*3/2) + "px");
             }
         </script>
         <meta charset="utf-8">
@@ -59,16 +89,40 @@
     </head>
 
     <body onresize="resize()">
+      <div class="background"></div>
+      
        <div class="back1">
            <h1>KALAREPA</h1>
        </div>
         
        <div class="back2">
-           
-           
-       <img src="hamburger1.jpg" alt="hamburger" class="hamburger" id="ham1">
+           <a href="index.html">
+           <img src="hamburger1.jpg" alt="hamburger" class="hamburger" id="ham1">
+           <div class="icon"  id="icon1"><svg  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" fill="#fff">
+               <path d="M464,295c15,0,27,12,27,27v147c0,15-12,27-27,27H46c-15,0-28-12-28-27V322c0-15,13-27,28-27s27,12,27,27v119h364V322
+                        C437,307,449,295,464,295z"/>
+               <path d="M164,166c-11,11-27,11-38,0s-11-27,0-38L236,18c5-5,12-8,19-8s14,3,19,8l110,110c11,11,11,27,0,38c-5,5-12,8-19,8
+                        s-15-3-20-8l-63-63v234c0,15-12,27-27,27s-27-12-27-27V103L164,166z"/>
+               </svg> </div></a>
+           <a href="index.html">
        <img src="hamburger2.jpg" alt="hamburger" class="hamburger" id="ham2">
+           <div class="icon"  id="icon2"><svg  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" fill="#fff">
+               <path d="M464,295c15,0,27,12,27,27v147c0,15-12,27-27,27H46c-15,0-28-12-28-27V322c0-15,13-27,28-27s27,12,27,27v119h364V322
+                        C437,307,449,295,464,295z"/>
+               <path d="M164,166c-11,11-27,11-38,0s-11-27,0-38L236,18c5-5,12-8,19-8s14,3,19,8l110,110c11,11,11,27,0,38c-5,5-12,8-19,8
+                        s-15-3-20-8l-63-63v234c0,15-12,27-27,27s-27-12-27-27V103L164,166z"/>
+               </svg> </div></a>
+           <a href="index.html">
        <img src="hamburger3.jpg" alt="hamburger" class="hamburger" id="ham3">
+           <div class="icon"  id="icon3"><svg  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                              viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" fill="#fff">
+               <path d="M464,295c15,0,27,12,27,27v147c0,15-12,27-27,27H46c-15,0-28-12-28-27V322c0-15,13-27,28-27s27,12,27,27v119h364V322
+                        C437,307,449,295,464,295z"/>
+               <path d="M164,166c-11,11-27,11-38,0s-11-27,0-38L236,18c5-5,12-8,19-8s14,3,19,8l110,110c11,11,11,27,0,38c-5,5-12,8-19,8
+                        s-15-3-20-8l-63-63v234c0,15-12,27-27,27s-27-12-27-27V103L164,166z"/>
+               </svg> </div></a>
        <div class="text">
            <h2>Hamburger</h2><h3>A hamburger (also called a beef burger, hamburger sandwich, burger or hamburg) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bun. Hamburgers are often served with lettuce, bacon, tomato, onion, pickles, cheese and condiments such as mustard, mayonnaise, ketchup, relish, and green chile.</h3>
        </div>
@@ -77,6 +131,7 @@
            
            
         <div class="footer">
+            <div>Icon made by <a href="http://www.amitjakhu.com" title="Amit Jakhu">Amit Jakhu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
             <br>Site by <a href="https://github.com/mnauky94">"Mnauky 94"</a>
         </div>
         <script>resize()</script>
