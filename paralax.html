@@ -6,13 +6,13 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
+                resize();
                 
                 var top = 0 ,
                     step = 55 ,
                     viewport = $(window).height(),
                     body = $('body'),
                     wheel = false;
-
 
                 $('body').mousewheel(function(event, delta) {
 
@@ -45,13 +45,10 @@
                     if (!wheel)
                         top = $(this).scrollTop();
                 });
-                
-                
             });
             
             function resize()
             {
-                
                 $("#ham2").css("top", (50+ $("#ham1").innerHeight()) + "px");
                 $("#ham3").css("top", (50+ $("#ham1").innerHeight()) + "px");
             }
@@ -82,6 +79,7 @@
         <div class="footer">
             <br>Site by <a href="https://github.com/mnauky94">"Mnauky 94"</a>
         </div>
+        <script>resize()</script>
     </body>
 
 </html>
