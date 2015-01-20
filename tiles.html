@@ -1,97 +1,90 @@
 <!DOCTYPE HTML>
 <html>
 
-    <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>        
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-        <meta charset="utf-8">
-        <title>Tiles</title>
-        <link rel="stylesheet" href="tiles.css">
-        </script>
+    <meta charset="utf-8">
+    <title>Tiles</title>
+    <link rel="stylesheet" href="tiles.css">
+    </script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             resize();
         });
-        
-        function resize()
-        {
-            if(innerHeight*2 < innerWidth)
-            {
-                $("#wrapper").css("width", innerHeight*2);
+
+        function resize() {
+            if (innerHeight * 2 < innerWidth) {
+                $("#wrapper").css("width", innerHeight * 2);
                 $("#wrapper").css("height", innerHeight);
-            }
-            else
-            {
+            } else {
                 $("#wrapper").css("width", innerWidth);
-                $("#wrapper").css("height", innerWidth/2);
+                $("#wrapper").css("height", innerWidth / 2);
             }
         }
     </script>
 
-    </head>
+</head>
+
 <body onresize="resize()">
-  <div id="wrapper">
-   <div class="dlazdice">
-       a
-   </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
-      <div class="dlazdice">
-          a
-      </div>
+    <div id="wrapper">
+        <div class="dlazdice modra">
+            <img class="obrazek" src="fruit/pineaple.jpg">
+        </div>
+        <div class="dlazdice cervena">
+            <img class="obrazek" src="fruit/kiwi.jpg">
+        </div>
+        <div class="dlazdice tyrkysova">
+            <img class="obrazek" src="fruit/raspberry.jpg">
+        </div>
+        <div class="dlazdice velka zelena">
+            <h1>Fruit</h1>
+        </div>
+        <div class="dlazdice oranzova">
+            <p class="text">In botany, a fruit is a part of a flowering plant that derives from specific tissues of the flower, one or more ovaries, and in some cases accessory tissues. Fruits are the means by which these plants disseminate seeds. Many of them that bear edible fruits, in particular, have propagated with the</p>
+        </div>
+        <div class="dlazdice seda">
+            <img class="obrazek" src="fruit/cherry.jpg">
+        </div>
+        <div class="dlazdice velka modra">
+            <p class="text">movements of humans and animals in a symbiotic relationship as a means for seed dispersal and nutrition, respectively; in fact, humans and many animals have become dependent on fruits as a source of food. Fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings.
+            <br>In common language usage, "fruit" normally means the fleshy seed-associated structures of a plant that are sweet or sour and edible in the raw state, such as apples, oranges, grapes, strawberries, bananas, and lemons. On the other</p>
+        </div>
+        <div class="dlazdice cervena">
+            <img class="obrazek" src="fruit/strawberry.jpg">
+        </div>
+        <div class="dlazdice tyrkysova">
+            <img class="obrazek" src="fruit/apple.jpg">
+        </div>
+        <div class="dlazdice seda">
+            <img class="obrazek" src="fruit/grapes.jpg">
+        </div>
+        <div class="dlazdice oranzova">
+            <img class="obrazek" src="fruit/peach.jpg">
+        </div>
+        <div class="dlazdice zelena">
+            <img class="obrazek" src="fruit/melon.jpg">
+        </div>
+        <div class="dlazdice velka seda">
+            <img class="obrazek" src="fruit/blueberry.jpg">
+        </div>
+        <div class="dlazdice oranzova">
+            <p class="text">hand, the botanical sense of "fruit" includes many structures that are not commonly called "fruits", such as bean pods, corn kernels, wheat grains, and tomatoes.</p>
+            <p class="text">The section of a fungus that produces spores is also called a fruiting body.</p>
+
+            <div class="source">Text source: <a href="http://en.wikipedia.org/wiki/Fruit">Wikipedia.org</a></div>
+        </div>
+        <div class="dlazdice modra">
+            <img class="obrazek" src="fruit/banana.jpg">
+        </div>
     </div>
 
-    
+
     <!--<div class="footer">Icons made by <a href="http://www.simpleicon.com" title="SimpleIcon">SimpleIcon</a> and <a href="http://RamiMcM.in" title="Rami McMin">Rami McMin</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
 <br>Site by <a href="https://github.com/mnauky94">"Mnauky 94"</a>
 </div> -->
 
 
 </body>
+
 </html>

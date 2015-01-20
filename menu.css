@@ -3,6 +3,7 @@
 @font-face { font-family: Caviar_bold; src: url('CaviarDreams_Bold.ttf');} 
 @font-face { font-family: Caviar_italic; src: url('CaviarDreams_Italic.ttf');}
 @font-face { font-family: Caviar_bolditalic; src: url('CaviarDreams_BoldItalic.ttf');}
+
 .nadpis{
     font-family: OrangeJuice;
     text-align: center;

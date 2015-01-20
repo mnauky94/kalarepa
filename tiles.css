@@ -3,6 +3,9 @@
 @font-face { font-family: Caviar_bold; src: url('CaviarDreams_Bold.ttf');} 
 @font-face { font-family: Caviar_italic; src: url('CaviarDreams_Italic.ttf');}
 @font-face { font-family: Caviar_bolditalic; src: url('CaviarDreams_BoldItalic.ttf');}
+@font-face { font-family: Comfortaa; src: url('Comfortaa-Regular.ttf');}
+@font-face { font-family: Comfortaa_bold; src: url('Comfortaa-Bold.ttf');}
+@font-face { font-family: Comfortaa_light; src: url('Comfortaa-Light.ttf');}
 
 body {
     background-color: #000;
@@ -23,16 +26,66 @@ body {
 .dlazdice {
     float: left;
     background: #FFE000;
-    height: 28%;
-    width: 14%;
-    margin-top: 2.2%;
-    margin-left: 2.2%;
+    height: 31%;
+    width: 15.5%;
+    margin-top: 1%;
+    margin-left: 1%;
+    transition: 0.3s;
 }
 
+.velka {
+    width: 32%;
+}
 
-@media screen and (min-width: 500px)
-{
-    body {
-        background: #FFF;
-    }
+.modra {
+    background: #2980b9;
+}
+.oranzova {
+    background: #d35400;
+}
+.tyrkysova {
+    background: #16a085;
+}
+.cervena {
+    background: #c0392b;
+}
+.zelena {
+    background: #27ae60;
+}
+.seda {
+    background: #2c3e50;
+}
+
+.dlazdice:hover {
+    filter: saturate(1.5);
+    -webkit-filter: contrast(1.2) saturate(1.2);
+    -moz-filter: saturate(1.5);
+}
+
+h1 {
+    font-family: Comfortaa_bold;
+    font-weight: normal;
+    margin: 10px;
+    font-size: 12vw;
+    text-align: center;
+    color: #000;
+}
+
+.obrazek {
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    font-family: Comfortaa;
+    text-align: justify;
+    padding: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
+    font-size: 1.27em;
+}
+.source {
+    font-family: Comfortaa_Light;
+    font-size: 1.1em;
+    padding-top: 3px;
 }

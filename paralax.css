@@ -5,7 +5,6 @@
 @font-face { font-family: Caviar_bolditalic; src: url('CaviarDreams_BoldItalic.ttf');}
 @font-face { font-family: Hambh; src: url('HAMBH.TTF');}
 
-
 body{
     padding: 0px;
     margin: 0px;
@@ -66,11 +65,13 @@ h3{
     width: 50%;
 }
 #ham2{
-    width: 50%
+    width: 50%;
+    top: 65%;
 }
 #ham3{
     left: 50%;
-    width: 50%
+    width: 50%;
+    top: 65%;
 }
 .text {
     position: absolute;
@@ -97,15 +98,15 @@ h3{
 }
 #icon1 {
     left: 25%;
-    top: 
+    top: 40%;
 }
 #icon2 {
     left: 25%;
-    top: 
+    top: 100%;
 }
 #icon3 {
     left: 75%;
-    top: 
+    top: 100%;
 }
 .footer{
     
