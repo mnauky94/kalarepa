@@ -1,0 +1,13 @@
+.text{
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    background-color: #00f;
+    color: #FFF;
+    background: url("fruit/apple.jpg");
+    top: 0;
+    left: 0;
+}
+body{
+    overflow: hidden;
+}

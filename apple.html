@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>CARS</title>
+        <link rel="stylesheet" href="apple.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="jquery.mousewheel.min.js"></script>
+        <script>
+            $(function() {
+                var isMouseDown = false;
+                document.onmousedown = function() { isMouseDown = true  };
+                document.onmouseup   = function() { isMouseDown = false };
+                document.onmousemove = function(e) { 
+                    if(isMouseDown) {
+                        var top = $(".text").css("top");
+                        var left = $(".text").css("left");
+                        
+                        top = parseInt(top);
+                        left = parseInt(left);
+                        
+                        $(".text").text(top + " " + left);
+                        
+                        $(".text").css("top", top + e.movementY);
+                        $(".text").css("left", left + e.movementX);
+                    } };
+            });
+        </script>
+    </head>
+    <body>
+        <div class="text">
+            TEXT
+        </div>
+    </body>
+    </html>

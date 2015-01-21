@@ -1,0 +1,75 @@
+@font-face { font-family: OrangeJuice; src: url('orange%20juice%202.0.ttf');}
+@font-face { font-family: Caviar; src: url('CaviarDreams.ttf');}
+@font-face { font-family: Caviar_bold; src: url('CaviarDreams_Bold.ttf');} 
+@font-face { font-family: Caviar_italic; src: url('CaviarDreams_Italic.ttf');}
+@font-face { font-family: Caviar_bolditalic; src: url('CaviarDreams_BoldItalic.ttf');}
+@font-face { font-family: Comfortaa; src: url('Comfortaa-Regular.ttf');}
+@font-face { font-family: Comfortaa_bold; src: url('Comfortaa-Bold.ttf');}
+@font-face { font-family: Comfortaa_light; src: url('Comfortaa-Light.ttf');}
+@font-face { font-family:Hambh; src: url('HAMBH.TTF')}
+@font-face { font-family:Code_bold; src: url('CODE Bold.otf')}
+@font-face { font-family:Code_light; src: url('CODE Light.otf')}
+
+
+
+body { 
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden
+}
+.space{
+    height: 100%;
+    width: 190%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1
+}
+h1 { font-family:Code_light;
+    padding-left:20px;
+    margin: 0px;
+    font-size: 13vmin;
+    color: #fff;
+    margin-left: 20px;
+    position: absolute;
+    padding-top: 1%
+    
+    
+}
+
+h2 { font-family: Code_bold;
+    position: absolute;
+    top: 10%;
+    font-size: 40vmin;
+    color: #fff; 
+    margin: 0px;
+    margin-left: 5px;
+}
+
+p{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 100%;
+    
+    color: #fff;
+    width: 75%;
+    font-family: Code;
+    font-size: 4.5vmin
+}
+#Capa_1{
+    position: absolute;
+    fill: #fff;
+    top: 50%;
+    width: 20%;
+}
+.kolecko {
+    position: absolute;
+    fill: #fff;
+    top: 50%;
+    width: 20vw;
+    height: 20vw;
+    background: #FFF;
+    opacity: .5;
+    border-radius: 50%;
+}
