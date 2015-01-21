@@ -17,7 +17,17 @@
 		$("body").mousewheel(function(event, delta) {
 			this.scrollLeft -= (delta *150);
 			event.preventDefault();
-		});   
+		}); 
+      
+      
+      
+     $(".kolecko, #Capa_1").click(function() {
+        $('body').animate( { scrollLeft: '+=2000' }, 1200 );
+      });
+      $(".kolecko, #Capa_1").click(function(){
+          $(".kolecko, #Capa_1").css("left", 100);
+          $(".kolecko, #Capa_1").css("left", 50);
+      });
 	});
 	</script>
 </head>
@@ -34,7 +44,8 @@
 		</div>
 		
 		<div class="post">
-        <p> The Desert is a sandy area that spawns desert monsters, cacti, and waterleaf. Each map will generally contain at least two desert areas. Drained Oceans also become deserts. As of update 1.2, pools of water in the Desert biome take on a sandy yellow color. Pyramids are rarely created during world generation in Desert Biomes. A desert is considered a desert as long as there are at least 1000 sand blocks, causing the water and background to change, but desert plants and enemies can spawn on even a single block of sand. Deserts are overridden by most other biomes.</p>
+        <p> The Desert is a sandy area that spawns desert monsters, cacti, and waterleaf. Each map will generally contain at least two desert areas. Drained Oceans also become deserts. As of update 1.2, pools of water in the Desert biome take on a sandy yellow color.
+<br>Pyramids are rarely created during world generation in Desert Biomes. A desert is considered a desert as long as there are at least 1000 sand blocks, causing the water and background to change, but desert plants and enemies can spawn on even a single block of sand. Deserts are overridden by most other biomes.</p>
 		</div>
 		
       <div class="kolecko"></div>
