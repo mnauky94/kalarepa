@@ -10,12 +10,10 @@
 @font-face { font-family:Code_bold; src: url('CODE Bold.otf')}
 @font-face { font-family:Code_light; src: url('CODE Light.otf')}
 
-
-
 body { 
     padding: 0px;
     margin: 0px;
-    overflow: hidden
+    overflow: hidden;
 }
 .space{
     height: 100%;
@@ -23,7 +21,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: -1
+    z-index: -1;
 }
 h1 { font-family:Code_light;
     padding-left:20px;
@@ -32,9 +30,7 @@ h1 { font-family:Code_light;
     color: #fff;
     margin-left: 20px;
     position: absolute;
-    padding-top: 1%
-    
-    
+    padding-top: 1% 
 }
 
 h2 { font-family: Code_bold;
@@ -62,6 +58,7 @@ p{
     fill: #fff;
     top: 50%;
     width: 20%;
+    transition: 0.5s;
 }
 .kolecko {
     position: absolute;
@@ -70,6 +67,54 @@ p{
     width: 20vw;
     height: 20vw;
     background: #FFF;
-    opacity: .5;
+    opacity: .3;
     border-radius: 50%;
+    left: 20px;
+    transition: 0.5s;
 }
+
+.background {
+    height: 100vh;
+    width: 190%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -10;
+    perspective: 1px;
+    overflow: hidden;
+    transition: 0.1s linear;
+}
+#poz1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+#poz2 {
+    position: absolute;
+    width: 33.3%;
+    height: 24.8%;
+    left: 51.28%;
+    top: 40%;
+}
+#poz3 {
+    position: absolute;
+    width: 19%;
+    height: 13.1%;
+    left: 4.4%;
+    top: 34.82%;
+}
+#poz4 {
+    position: absolute;
+    width: 100%;
+    height: 72.4%;
+    top: 27.64%;
+    left: 0px;
+}
+#l1, #l2, #l3, #l4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+

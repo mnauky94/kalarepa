@@ -15,9 +15,18 @@
 		$("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
 		$(".post").wrap("<td></td>");
 		$("body").mousewheel(function(event, delta) {
-			this.scrollLeft -= (delta *150);
+			this.scrollLeft -= (delta *100);
 			event.preventDefault();
-		});   
+		});
+      $(window).on('scroll', function (e) {
+        var left = $(this).scrollLeft();
+        $("#l3").css("left", left/2);
+        $("#l2").css("left", left/2 - innerWidth/3);
+          $("#l1").css("left", left/5);
+      });
+      $(".kolecko, #Capa_1").click(function() {
+          $('body').animate( { scrollLeft: '+=2000' }, 2000 );
+      });
 	});
 	</script>
 </head>
@@ -48,44 +57,19 @@
                                                                           C20.823,16.821,21,16.421,21,16s-0.177-0.821-0.486-1.106L14.514,9.395z M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16
                                                                           c8.836,0,16-7.164,16-16S24.836,0,16,0z M16,29C8.832,29,3,23.168,3,16S8.832,3,16,3c7.168,0,13,5.832,13,13S23.168,29,16,29z"/>
                 </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
         </svg>
 		
 		<div class="post">
 			
 		</div> 
-	<div><img class="space" alt="space" src=landscape2.jpg></div>
-	</div>
+	<!--<div><img class="space" alt="space" src=landscape2.jpg></div>-->
+    <div class="background">
+      <div id="l1"><img alt="" src="landscape2-assets/pozadi.png" id="poz1"></div>
+      <div id="l2"><img alt="" src="landscape2-assets/kopce.png" id="poz2"></div>
+         <div id="l3"><img alt="" src="landscape2-assets/kopce2.png" id="poz3"></div>
+      <div id="l4"><img alt="" src="landscape2-assets/popredi.png" id="poz4"></div>
+    </div>
+	</div> 
 	
 </body>
 
