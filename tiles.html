@@ -21,11 +21,64 @@
                 $("#wrapper").css("height", innerWidth / 2);
             }
         }
+
+        var page = 0;
+        var index = 0;
+        var interval;
+        var tiles;
+        var moving = 0;
+
+        function wheel() {
+            if (moving == 0)
+            {
+            if (event.wheelDelta >= 120) {
+                //nahoru
+                if (page == 1) {
+                    tiles = document.getElementsByClassName("dlazdice");
+                    index = tiles.length - 1;
+
+                    moving = 1;
+                    interval = setInterval(function () {
+                        if (index < 0) {
+                            moving = 0;
+                            clearInterval(interval);
+                            return;
+                        }
+                        tiles[index].style.left = "0px";
+                        index--;
+                    }, 15);
+
+                    page = 0;
+                }
+            } else if (event.wheelDelta <= -120) {
+                //dolu;
+                if (page == 0) {
+
+                    tiles = document.getElementsByClassName("dlazdice");
+                    index = 0;
+
+                    moving = 1;
+                    interval = setInterval(function () {
+                        if (index >= tiles.length) {
+                            moving = 0;
+                            clearInterval(interval);
+                            return;
+                        }
+                        tiles[index].style.left = "-100%";
+                        index++;
+                    }, 15);
+
+                    page = 1;
+                }
+            }
+            }
+            return false;
+        }
     </script>
 
 </head>
 
-<body onresize="resize()">
+<body onresize="resize()" onmousewheel="wheel()">
     <div id="wrapper">
         <div class="dlazdice modra">
             <img class="obrazek" src="fruit/pineaple.jpg">
@@ -47,7 +100,7 @@
         </div>
         <div class="dlazdice velka modra">
             <p class="text">movements of humans and animals in a symbiotic relationship as a means for seed dispersal and nutrition, respectively; in fact, humans and many animals have become dependent on fruits as a source of food. Fruits account for a substantial fraction of the world's agricultural output, and some (such as the apple and the pomegranate) have acquired extensive cultural and symbolic meanings.
-            <br>In common language usage, "fruit" normally means the fleshy seed-associated structures of a plant that are sweet or sour and edible in the raw state, such as apples, oranges, grapes, strawberries, bananas, and lemons. On the other</p>
+                <br>In common language usage, "fruit" normally means the fleshy seed-associated structures of a plant that are sweet or sour and edible in the raw state, such as apples, oranges, grapes, strawberries, bananas, and lemons. On the other</p>
         </div>
         <div class="dlazdice cervena">
             <img class="obrazek" src="fruit/strawberry.jpg">
@@ -71,10 +124,59 @@
             <p class="text">hand, the botanical sense of "fruit" includes many structures that are not commonly called "fruits", such as bean pods, corn kernels, wheat grains, and tomatoes.</p>
             <p class="text">The section of a fungus that produces spores is also called a fruiting body.</p>
 
-            <div class="source">Text source: <a href="http://en.wikipedia.org/wiki/Fruit">Wikipedia.org</a></div>
+            <div class="source">Text source: <a href="http://en.wikipedia.org/wiki/Fruit">Wikipedia.org</a>
+            </div>
         </div>
         <div class="dlazdice modra">
             <img class="obrazek" src="fruit/banana.jpg">
+        </div>
+    </div>
+    
+    
+    <div id="wrapper2">
+        <div class="dlazdice modra">
+            <img class="obrazek" src="vegetable/pepper.jpg">
+        </div>
+        <div class="dlazdice cervena">
+            <img class="obrazek" src="vegetable/onion.jpg">
+        </div>
+        <div class="dlazdice tyrkysova vetsi">
+            <h2>Vegetable</h2>
+        </div>
+        <div class="dlazdice zelena">
+            <img class="obrazek" src="vegetable/tomato.jpg">
+        </div>
+        <div class="dlazdice zelena velka">
+            <p class="text">In culinary terms, a vegetable is an edible plant or its part, intended for cooking or eating raw.<br>
+
+               The non-biological definition of a vegetable is largely based on culinary and cultural tradition. Apart from vegetables, other main types of plant food are fruits, grains and nuts. Vegetables are most often consumed as salads or cooked in savory or salty dishes, while culinary fruits are usually sweet and used for desserts, but it is not the universal rule. Therefore, the division is somewhat arbitrary, based on cultural views. For example, some people consider mushrooms to be vegetables even though they are not </p>
+        </div>
+        <div class="dlazdice seda">
+            <img class="obrazek" src="vegetable/lentil.jpg">
+        </div>
+        <div class="dlazdice modra">
+            <p class="text">biologically plants, while others consider them a separate food category; some cultures group potatoes with cereal products such as noodles or rice, while most English speakers would consider them vegetables.<br>
+                Some vegetables can be consumed raw, while some,</p>
+        </div>
+        <div class="dlazdice cervena">
+            <img class="obrazek" src="vegetable/garlic.jpg">
+        </div>
+        <div class="dlazdice tyrkysova">
+            <img class="obrazek" src="vegetable/pea.jpg">
+        </div>
+        <div class="dlazdice seda">
+            <img class="obrazek" src="vegetable/lettuce.jpg">
+        </div>
+        <div class="dlazdice seda velka">
+            <p class="text">such as cassava, must be cooked to destroy certain natural toxins or microbes in order to be edible. A number of processed food items available on the market contain vegetable ingredients and can be referred to as "vegetable derived" products. These products may or may not maintain the nutritional integrity of the vegetable used to produce them.</p>
+            <div class="source">Text source: <a href="http://en.wikipedia.org/wiki/Fruit">Wikipedia.org</a>
+            </div>
+        </div>
+        <div class="dlazdice zelena">
+            <img class="obrazek" src="vegetable/cucumber.jpg">
+        </div>
+        <div class="dlazdice velka seda">
+            <img class="obrazek" src="vegetable/carrot.jpg">
         </div>
     </div>
 

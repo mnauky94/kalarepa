@@ -8,33 +8,50 @@
 @font-face { font-family: Comfortaa_light; src: url('Comfortaa-Light.ttf');}
 
 body {
-    background-color: #000;
+    background-color: #FFF;
     padding: 0px;
     padding-left: 2vh; 
-    margin: 0px;
+    margin: 0px; 
+    overflow: hidden;
+    color: #FFF;
 }
 
 #wrapper {
     position: absolute;
-    width: 96vw;
+    width: 100vw;
     height: 48vw;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 }
 
+#wrapper2 {
+    position: absolute;
+    width: 100vw;
+    height: 50vw;
+    transform: translate(-50%, -50%);
+    left: 150%;
+    top: 50%;
+}
+
 .dlazdice {
     float: left;
+    position: relative;
     background: #FFE000;
     height: 31%;
     width: 15.5%;
     margin-top: 1%;
     margin-left: 1%;
-    transition: 0.3s;
+    transition: 1s ease-in-out;
+    left: 0px;
 }
 
 .velka {
     width: 32%;
+}
+
+.vetsi {
+    width: 48.5%;
 }
 
 .modra {
@@ -56,19 +73,25 @@ body {
     background: #2c3e50;
 }
 
-.dlazdice:hover {
+/*.dlazdice:hover {
     filter: saturate(1.5);
     -webkit-filter: contrast(1.2) saturate(1.2);
     -moz-filter: saturate(1.5);
-}
+}*/
 
 h1 {
     font-family: Comfortaa_bold;
     font-weight: normal;
-    margin: 10px;
+    margin: 4% 0px;
     font-size: 12vw;
     text-align: center;
-    color: #000;
+}
+h2 {
+    font-family: Comfortaa_bold;
+    font-weight: normal;
+    margin: 4% 0px;
+    font-size: 9.5vw;
+    text-align: center;
 }
 
 .obrazek {
@@ -88,4 +111,17 @@ h1 {
     font-family: Comfortaa_Light;
     font-size: 1.1em;
     padding-top: 3px;
+}
+
+a , a:visited {
+    color: white;
+}
+
+@media screen and (max-width: 1400px)
+{
+    .text {
+        font-size: 0.9em;
+    }
+    .source {
+        font-size: 0.8em;
 }
