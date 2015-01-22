@@ -15,14 +15,17 @@
 		$("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
 		$(".post").wrap("<td></td>");
 		$("body").mousewheel(function(event, delta) {
-			this.scrollLeft -= (delta *150);
+        var scroll = -delta * 150;
+        scroll = "+=" + scroll;
+        $('body').animate( { scrollLeft: scroll}, 100, "linear");
+			  //this.scrollLeft -= (delta * 150);
 			event.preventDefault();
 		}); 
       
       
       
      $(".kolecko, #Capa_1").click(function() {
-        $('body').animate( { scrollLeft: '+=2000' }, 1200 );
+        $('body').animate( { scrollLeft: '+=2000' }, 1200, "swing" );
       });
       $(".kolecko, #Capa_1").click(function(){
           $(".kolecko, #Capa_1").css("left", 100);
