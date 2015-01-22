@@ -127,17 +127,10 @@
         
         function PerPage()
         {
-            switch(count)
-            {
-                    case -1:
-                        $("#s2 .move").css("left", 0);
-                        $("#s2 .move").css("opacity", 1);
-                        break;
-                    case -2:
-                        $("#s3 .move").css("left", 0);
-                        $("#s3 .move").css("opacity", 1);
-                        break;
-            }
+            var id = -count + 1;
+            id = "#s" + id + " .move";
+            $(id).css("left", 0);
+            $(id).css("opacity", 1);
         }
         
         function ToPage(page)
@@ -221,10 +214,14 @@
         
         
 <section id="s2" class="sekce">
-            <img src="Untitled%203.bmp" alt="big boys" class="move">
+    <a href="HorzScrolling/index.html"> <img src="Untitled%203.bmp" alt="big boys" class="move"></a>
         </section>
           <section id="s3" class="sekce">
             <a href="paralax.html"><img src="hamburger2.jpg" alt="hamburger" class="move"></a>
+          </section>
+          
+          <section id="s4" class="sekce">
+              <a href="tiles.html"><img src="fruit/blueberry.jpg" alt="fruit" class="move"></a>
           </section>
           
         </div>
@@ -294,7 +291,7 @@
         <br>
         <br>
         <br>
-        <br>
+        TROLL
         <br>
         <br>
         <br>

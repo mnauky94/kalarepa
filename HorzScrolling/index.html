@@ -9,33 +9,54 @@
 	<link rel="stylesheet" href="style.css">
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="../jquery.easing.1.3.js"></script>
 	<script src="jquery.mousewheel.js"></script>
 	<script>
 	$(function(){
 		$("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
 		$(".post").wrap("<td></td>");
 		$("body").mousewheel(function(event, delta) {
-        var scroll = -delta * 150;
+        var scroll = -delta * 300;
         scroll = "+=" + scroll;
         $('body').animate( { scrollLeft: scroll}, 100, "linear");
 			  //this.scrollLeft -= (delta * 150);
 			event.preventDefault();
+        
+      
 		}); 
       
-      
-      
-     $(".kolecko, #Capa_1").click(function() {
-        $('body').animate( { scrollLeft: '+=2000' }, 1200, "swing" );
+
+     $(".sipka").click(function() {         
+         if ($("body").scrollLeft() > innerWidth*0.6)
+         {
+             $("body").animate( { scrollLeft: '-=2000' }, 1200,  "easeInOutCubic" );
+         }
+         else
+         {
+            $("body").animate( { scrollLeft: '+=2000' }, 1200, "easeInOutCubic" );
+            $("h1").css("left","38%");
+         setTimeout(function() {
+            $("h1").css("left","2.5%")
+         }, 1200);
+         }
       });
-      $(".kolecko, #Capa_1").click(function(){
-          $(".kolecko, #Capa_1").css("left", 100);
-          $(".kolecko, #Capa_1").css("left", 50);
-      });
+      
 	});
+      
+      function scroll() {
+          if ($("body").scrollLeft() > innerWidth*0.5)
+          {
+            $(".sipka").removeClass("sipka").addClass("sipka1");
+          }
+          else
+          {
+              $(".sipka1").removeClass("sipka1").addClass("sipka")
+          }
+      }
 	</script>
 </head>
 
-<body>
+<body onscroll="scroll()">
 	
 	<h1>Kalarepa</h1>
 
@@ -48,56 +69,15 @@
 		
 		<div class="post">
         <p> The Desert is a sandy area that spawns desert monsters, cacti, and waterleaf. Each map will generally contain at least two desert areas. Drained Oceans also become deserts. As of update 1.2, pools of water in the Desert biome take on a sandy yellow color.
-<br>Pyramids are rarely created during world generation in Desert Biomes. A desert is considered a desert as long as there are at least 1000 sand blocks, causing the water and background to change, but desert plants and enemies can spawn on even a single block of sand. Deserts are overridden by most other biomes.</p>
 		</div>
-		
-      <div class="kolecko"></div>
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-            <g id="Right">
-                <g>
-                    <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M14.514,9.395l-0.003,0.004C14.243,9.153,13.891,9,13.5,9
-                                                                          C12.672,9,12,9.672,12,10.5c0,0.438,0.19,0.828,0.489,1.102l-0.003,0.004L17.28,16l-4.794,4.395l0.003,0.004
-                                                                          C12.19,20.672,12,21.062,12,21.5c0,0.828,0.672,1.5,1.5,1.5c0.391,0,0.743-0.153,1.011-0.398l0.003,0.004l6-5.5
-                                                                          C20.823,16.821,21,16.421,21,16s-0.177-0.821-0.486-1.106L14.514,9.395z M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16
-                                                                          c8.836,0,16-7.164,16-16S24.836,0,16,0z M16,29C8.832,29,3,23.168,3,16S8.832,3,16,3c7.168,0,13,5.832,13,13S23.168,29,16,29z"/>
-                </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-        </svg>
+     <div class="sipka">
+         <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" style="pointer-events: none; display: block;"><g id="play-arrow"><polygon points="0,0 0,14 11,7 "></polygon></g></svg></div>
 		
 		<div class="post">
-			
-		</div> 
+        <a href="../index.html">	<img class="desert_img" id="corrupted" alt="Corrupted Desert" src="Corrupted_Desert.png"></a>
+        <a href="../tiles.html">   <img class="desert_img" id="crimsoned" alt="Crimsoned Desert" src="Crimsoned_Desert.png"></a>
+        <a href="../paralax.html"> <img class="desert_img" id="hallowed" alt="Hallow Desert" src="Hallowed_Desert.png"></a>  
+      </div>
 	<div><img class="space" alt="space" src=landscape2.jpg></div>
 	</div>
 	
