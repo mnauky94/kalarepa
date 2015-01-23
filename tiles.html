@@ -10,6 +10,22 @@
     <script>
         $(document).ready(function () {
             resize();
+            
+            $(".arrow").click(function () {                
+                if(page == 0)
+                {
+                    var e = new Object();
+                    e.wheelDelta = -200;
+                    wheel(e);
+                }
+                else if(page == 1)
+                {
+                    var e = new Object();
+                    e.wheelDelta = 200;
+                    wheel(e);
+                }
+                
+            });
         });
 
         function resize() {
@@ -28,9 +44,12 @@
         var tiles;
         var moving = 0;
 
-        function wheel() {
+        function wheel(e) {
+            if (e != null)
+                event = e;
             if (moving == 0)
             {
+                $(".arrow").css("opacity", 0);
             if (event.wheelDelta >= 120) {
                 //nahoru
                 if (page == 1) {
@@ -49,6 +68,7 @@
                     }, 15);
 
                     page = 0;
+                    setTimeout(objevSipku,1000);
                 }
             } else if (event.wheelDelta <= -120) {
                 //dolu;
@@ -69,10 +89,18 @@
                     }, 15);
 
                     page = 1;
+                    setTimeout(objevSipku,1000);
                 }
             }
+                
             }
             return false;
+        }
+        
+        function objevSipku()
+        {
+            $(".arrow").css("opacity",0.5);
+            $(".arrow").toggleClass("arrow2");
         }
     </script>
 
@@ -179,8 +207,11 @@
             <img class="obrazek" src="vegetable/carrot.jpg">
         </div>
     </div>
-
-
+    
+    <div class="arrow"><svg id="sipka" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" style="pointer-events: none; display: block;"><g id="play-arrow"><polygon points="0,0 0,14 11,7 "></polygon></g></svg>
+        <svg id="sipka2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 14" style="pointer-events: none; display: block;"><g id="play-arrow"><polygon points="0,0 0,14 11,7 "></polygon></g></svg>
+    </div>
+    
     <!--<div class="footer">Icons made by <a href="http://www.simpleicon.com" title="SimpleIcon">SimpleIcon</a> and <a href="http://RamiMcM.in" title="Rami McMin">Rami McMin</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
 <br>Site by <a href="https://github.com/mnauky94">"Mnauky 94"</a>
 </div> -->

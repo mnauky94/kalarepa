@@ -37,7 +37,7 @@ body {
 .dlazdice {
     float: left;
     position: relative;
-    background: #FFE000;
+    background: #000;
     height: 31%;
     width: 15.5%;
     margin-top: 1%;
@@ -115,6 +115,44 @@ h2 {
 
 a , a:visited {
     color: white;
+}
+
+.arrow {
+    position: fixed;
+    z-index: 10;
+    width: 4vw;
+    height: 5.2vw;
+    bottom: 30px;
+    right: 40px;
+    transition: 0.5s ease;
+    opacity: 0.5;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow2 {
+    left: 50px;
+    transform: scale(-1);
+}
+
+#sipka {
+    fill: #FFF;
+    position: relative;
+    z-index: 5;
+}
+
+#sipka2 {
+    fill: #000;
+    position: relative;
+    top: -5.75vw;
+    left: -0.3vw;
+    z-index: 4;
+    height: 120%;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 1400px)
